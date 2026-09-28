@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zeina Emad Hussein | Data & AI Engineer</title>
+<meta name="description" content="Portfolio of Zeina Emad Hussein, Computer & Communications Engineering student building data pipelines and applied AI.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#16121F; --surface:#221C33; --line:#4A4066; --text:#F3EEFF; --soft:#B4ACCB; --ink:#2A2340;
+  --lav:#CDBEFF; --peach:#FFCFBB; --mint:#BFEBD6; --butter:#FFEAA9; --sky:#BCDDFB;
+  --r:28px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1.05rem/1.65 'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif;line-height:1.02;letter-spacing:-.03em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--butter);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0 0}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;margin-bottom:36px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(22,18,31,.85);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font:800 1.2rem 'Bricolage Grotesque';text-decoration:none;letter-spacing:-.02em}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--soft)}
+nav ul a:hover{color:var(--text)}
+@media(max-width:720px){nav ul li:not(:last-child){display:none}}
+
+/* hero */
+.hero{padding-top:64px}
+.hero-top{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3.2rem,9.5vw,7.6rem);font-weight:800}
+.me{width:min(340px,30vw);aspect-ratio:4/5;object-fit:cover;display:block;border-radius:42% 58% 52% 48% / 40% 44% 56% 60%;background:var(--lav);border:4px solid var(--lav);box-shadow:14px 14px 0 var(--peach);transform:rotate(2deg)}
+@media(max-width:820px){.hero-top{grid-template-columns:1fr;gap:32px}.me{order:-1;width:220px}}
+.hero h1 span{display:block}
+.hero h1 .l2{background:var(--lav);color:var(--ink);display:inline-block;padding:0 .18em .06em;border-radius:.22em;transform:rotate(-1.5deg);margin-top:.06em}
+.role{margin-top:32px;font-size:clamp(1.15rem,2.2vw,1.5rem);max-width:640px;color:var(--soft)}
+.role b{color:var(--text);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:14px 26px;border-radius:99px;font-weight:500;text-decoration:none;border:2px solid var(--text);color:var(--text);transition:transform .2s,background .2s}
+.btn.solid{background:var(--lav);color:var(--ink);border-color:var(--lav)}
+.btn:hover{transform:translateY(-3px)}
+.btn:not(.solid):hover{background:var(--butter);color:var(--ink);border-color:var(--butter)}
+
+/* pipeline (the one animated moment) */
+.pipe{margin-top:64px;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pipe::before{content:"";position:absolute;left:8%;right:8%;top:50%;border-top:3px dashed var(--text);opacity:.3}
+.node{color:var(--ink);position:relative;border-radius:var(--r);padding:22px 24px;min-height:150px}
+.node h3{font-size:1.5rem;font-weight:800;margin-bottom:6px}
+.node p{font-size:.95rem;line-height:1.45}
+.node:nth-child(2){background:var(--butter)}
+.node:nth-child(3){background:var(--mint)}
+.node:nth-child(4){background:#FFC8E0}
+.packet{position:absolute;top:calc(50% - 9px);left:6%;width:18px;height:18px;border-radius:50%;background:var(--text);box-shadow:0 0 0 6px rgba(243,238,255,.15);z-index:2;animation:flow 6s ease-in-out infinite}
+@keyframes flow{0%{left:6%;transform:scale(.6)}50%{transform:scale(1.2)}100%{left:92%;transform:scale(.6)}}
+@media(max-width:720px){.pipe{grid-template-columns:1fr}.pipe::before,.packet{display:none}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.about p{font-size:1.2rem;max-width:62ch}
+.facts{display:grid;gap:12px}
+.fact{color:var(--ink);background:var(--sky);border-radius:20px;padding:16px 20px}
+.fact:nth-child(2){background:var(--lav)}
+.fact:nth-child(3){background:var(--peach)}
+.fact small{display:block;color:rgba(42,35,64,.7);font-size:.85rem}
+.fact strong{font-weight:500}
+@media(max-width:820px){.about{grid-template-columns:1fr}}
+
+/* experience timeline */
+.tl{border-left:3px solid var(--line);margin-left:8px;display:grid;gap:28px}
+.job{position:relative;margin-left:28px;background:var(--surface);border:2px solid var(--line);border-radius:var(--r);padding:28px}
+.job::before{content:"";position:absolute;left:-40px;top:34px;width:18px;height:18px;border-radius:50%;background:var(--c,var(--lav));border:3px solid var(--bg)}
+.job .when{font-size:.9rem;color:var(--soft)}
+.job h3{font-size:1.6rem;font-weight:800;margin:4px 0 2px}
+.job .org{font-weight:500;margin-bottom:12px}
+.job ul{padding-left:1.1rem;display:grid;gap:8px}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{color:var(--ink);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:14px;transition:transform .25s}
+.card:hover{transform:translateY(-6px) rotate(-.4deg)}
+.card:nth-child(1){background:var(--lav);grid-row:span 2}
+.card:nth-child(2){background:var(--mint)}
+.card:nth-child(3){background:var(--butter)}
+.card:nth-child(4){background:var(--peach)}
+.card h3{font-size:1.7rem;font-weight:800}
+.card .date{font-size:.9rem;opacity:.7}
+.card ul{padding-left:1.1rem;display:grid;gap:8px;font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.tags span{background:rgba(255,255,255,.65);border-radius:99px;padding:4px 12px;font-size:.85rem}
+.card a.more{font-weight:500;text-underline-offset:4px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}.card:nth-child(1){grid-row:auto}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.sk{border:2px solid var(--line);border-radius:var(--r);padding:26px}
+.sk h3{font-size:1.35rem;font-weight:800;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{color:var(--ink);padding:5px 14px;border-radius:99px;font-size:.92rem;background:var(--c)}
+@media(max-width:820px){.skills{grid-template-columns:1fr}}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.edu div{background:var(--surface);border-radius:var(--r);border:2px solid var(--line);padding:26px}
+.edu h3{font-size:1.3rem;font-weight:800;margin-bottom:6px}
+.edu p{color:var(--soft);font-size:.98rem}
+@media(max-width:820px){.edu{grid-template-columns:1fr}}
+
+/* contact */
+.contact{margin-top:96px;background:var(--lav);color:var(--ink);border-radius:40px 40px 0 0;padding:80px 0 48px}
+.contact h2{font-size:clamp(2.6rem,8vw,6rem);margin-bottom:24px}
+.contact a.mail{font:800 clamp(1.3rem,3.6vw,2.4rem) 'Bricolage Grotesque';color:var(--ink);text-underline-offset:8px;word-break:break-all}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.links a{border:2px solid var(--ink);color:var(--ink);padding:10px 22px;border-radius:99px;text-decoration:none;font-weight:500}
+.links a:hover{background:var(--ink);color:var(--lav)}
+.contact small{display:block;margin-top:56px;opacity:.6}
+
+@media(prefers-reduced-motion:reduce){.packet{animation:none;left:50%}*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Zeina Hussein</a>
+  <ul><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<main id="top">
+<header class="wrap hero">
+  <div class="hero-top"><div>
+  <h1><span>Zeina Emad</span><span class="l2">Hussein</span></h1>
+  <p class="role"><b>Data engineer and AI engineer in the making.</b> I turn raw, messy data into clean pipelines and useful AI, from first scrape to working dashboard.</p>
+  <div class="cta">
+    <a class="btn solid" href="#projects">See my projects</a>
+    <a class="btn" href="mailto:zeinaemadhamza@gmail.com">Email me</a>
+  </div>
+  </div>
+  <img class="me" src="photo.jpg" alt="Portrait of Zeina Emad Hussein" width="340" height="425">
+  </div>
+  <div class="pipe" aria-label="How I work: extract, transform, load">
+    <div class="packet" aria-hidden="true"></div>
+    <div class="node"><h3>Extract</h3><p>REST APIs, Selenium scraping, Kafka streams</p></div>
+    <div class="node"><h3>Transform</h3><p>Pandas, PySpark, SSIS, feature engineering</p></div>
+    <div class="node"><h3>Load</h3><p>Azure SQL, Synapse, Streamlit dashboards</p></div>
+  </div>
+</header>
+
+<section class="wrap" id="about">
+  <h2>About</h2>
+  <div class="about">
+    <p>I'm a Computer &amp; Communications Engineering student at Alexandria University, building toward a career in Data Engineering and Applied AI. I design ETL and data-warehousing pipelines, work with distributed big-data tools, and explore GenAI systems like RAG and vector databases. I like shipping work end to end, from raw data to something people can actually use.</p>
+    <div class="facts">
+      <div class="fact"><small>Studying</small><strong>B.E. Computer &amp; Communication Engineering, GPA 3.68</strong></div>
+      <div class="fact"><small>Based in</small><strong>Alexandria, Egypt</strong></div>
+      <div class="fact"><small>Languages</small><strong>Arabic (native), English (fluent), Turkish (basic)</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="experience">
+  <h2>Experience</h2>
+  <div class="tl">
+    <article class="job" style="--c:var(--mint)">
+      <span class="when">July 2026 – December 2026</span>
+      <h3>Data Engineering Track</h3>
+      <p class="org">Digital Egypt Pioneers Initiative (DEPI), Ministry of Communications and Information Technology</p>
+      <ul>
+        <li>Building ETL and data-warehousing pipelines with SSIS and Python, using SQL Server for advanced queries, stored procedures, triggers, and transactions.</li>
+        <li>Processing data at scale with Hadoop, PySpark, Apache Airflow, and Apache Kafka, alongside Python (OOP, NumPy, Pandas).</li>
+        <li>Covering Azure's data stack (Data Lake Storage, Data Factory, Synapse, Databricks, Fabric), plus vector databases and RAG systems.</li>
+      </ul>
+    </article>
+    <article class="job" style="--c:var(--peach)">
+      <span class="when">July 2026 – August 2026</span>
+      <h3>AI &amp; Data Products and Solutions Intern</h3>
+      <p class="org">Ejada</p>
+      <ul>
+        <li>Led market and technical research for an Input Validation Bot project and presented findings to the product team.</li>
+        <li>Built an end-to-end ML pipeline covering data acquisition, cleaning, model tuning, and experiment tracking with Docker, FastAPI, and Streamlit.</li>
+        <li>Completed a 4-week GenAI program on AI agents, transformers, and prompt engineering (chain-of-thought, few-shot, RAG).</li>
+        <li>Rotated through four AI teams (Audio, OCR, Chatbot/Assistant, Testing) and presented on state-of-the-art AI research.</li>
+      </ul>
+    </article>
+    <article class="job" style="--c:var(--butter)">
+      <span class="when">July 2023 – July 2025</span>
+      <h3>Secretary &amp; Fundraising Director</h3>
+      <p class="org">Interact Alexandria West, Rotary Alexandria</p>
+      <ul>
+        <li>Managed club communications, membership records, and volunteer onboarding while coordinating meetings and directors.</li>
+        <li>Led income-generating projects end to end and secured company sponsorships through external partnerships.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card">
+      <span class="date">September 2026</span>
+      <h3>Wuzzuf Job Market Intelligence Pipeline</h3>
+      <ul>
+        <li>Automated multi-track scraping with Selenium to collect live job listings across data engineering, data science, and AI, handling dynamic pages and pagination.</li>
+        <li>Cleaned the data in Pandas: deduplication, column standardization, and features such as employment type and work mode.</li>
+        <li>Deployed a Streamlit dashboard with live filtering by track and work mode.</li>
+      </ul>
+      <div class="tags"><span>Python</span><span>Selenium</span><span>Pandas</span><span>Streamlit</span><span>Git</span></div>
+      <a class="more" href="#">View on GitHub</a>
+    </article>
+    <article class="card">
+      <span class="date">September 2026</span>
+      <h3>Weather Data ETL Pipeline</h3>
+      <ul>
+        <li>Pulled real-time weather for multiple regions from the OpenWeatherMap API, then cleaned and enriched it in Pandas.</li>
+        <li>Loaded it into Azure SQL with parameterized pyodbc queries, keeping credentials in .env files.</li>
+      </ul>
+      <div class="tags"><span>Python</span><span>PyODBC</span><span>Azure SQL</span><span>REST APIs</span></div>
+      <a class="more" href="#">View on GitHub</a>
+    </article>
+    <article class="card">
+      <span class="date">August 2026</span>
+      <h3>Supermarket Sales Analysis</h3>
+      <ul>
+        <li>Cleaned the dataset and engineered date and satisfaction features.</li>
+        <li>Answered 10+ business questions on revenue, top categories, and customer satisfaction with an interactive Streamlit dashboard.</li>
+      </ul>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>Seaborn</span><span>Streamlit</span></div>
+      <a class="more" href="#">View on GitHub</a>
+    </article>
+    <article class="card">
+      <span class="date">August 2025</span>
+      <h3>Food &amp; Beverage E-commerce Website</h3>
+      <ul><li>Designed a responsive storefront with dynamic product displays and clear navigation that works on mobile.</li></ul>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <a class="more" href="#">View on GitHub</a>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="sk"><h3>Data Engineering</h3><div class="chips" style="--c:var(--mint)"><span>SQL Server</span><span>SSIS</span><span>ETL / Data Warehousing</span><span>Hadoop</span><span>PySpark</span><span>Airflow</span><span>Kafka</span><span>Data Factory</span><span>Synapse</span><span>Data Lake Storage</span><span>Databricks</span><span>Fabric</span></div></div>
+    <div class="sk"><h3>AI &amp; Machine Learning</h3><div class="chips" style="--c:var(--lav)"><span>Transformers &amp; NLP</span><span>BERT / GPT</span><span>RAG</span><span>Vector databases</span><span>Prompt engineering</span><span>Supervised &amp; unsupervised ML</span><span>Model evaluation</span></div></div>
+    <div class="sk"><h3>Programming</h3><div class="chips" style="--c:var(--butter)"><span>Python</span><span>NumPy</span><span>Pandas</span><span>SQL</span><span>C</span><span>Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+    <div class="sk"><h3>Tools &amp; Frameworks</h3><div class="chips" style="--c:var(--peach)"><span>Docker</span><span>FastAPI</span><span>Flask</span><span>Streamlit</span><span>Git / GitHub</span><span>Selenium</span><span>VS Code</span><span>AutoCAD</span></div></div>
+  </div>
+</section>
+
+<section class="wrap" id="education">
+  <h2>Education &amp; training</h2>
+  <div class="edu">
+    <div><h3>Alexandria University</h3><p>B.E. in Computer and Communication Engineering<br>Sept 2023 – expected July 2028 · GPA 3.68</p></div>
+    <div><h3>Arab Academy for Science and Technology</h3><p>High School Diploma, 2023<br>Top 10 in class · 9 A* IGCSE subjects</p></div>
+    <div><h3>AI and Machine Learning Foundations</h3><p>Sprints.ai, June 2026<br>10 modules on Python and core ML, with a capstone project.</p></div>
+    <div><h3>Web Development Training</h3><p>NTI x ITIDA &amp; Sprints x Microsoft Egypt, Jul – Aug 2025<br>130+ hours of HTML, CSS, JavaScript, Git, and Python, plus Cisco network security.</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's build something with data.</h2>
+    <a class="mail" href="mailto:zeinaemadhamza@gmail.com">zeinaemadhamza@gmail.com</a>
+    <div class="links">
+      <a href="tel:+201275264060">+20 127 526 4060</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <small>© 2026 Zeina Emad Hussein · Alexandria, Egypt</small>
+  </div>
+</footer>
+</body>
+</html>
