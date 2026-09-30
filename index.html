@@ -86,7 +86,7 @@ nav ul a:hover{color:var(--text)}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .card{color:var(--ink);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:14px;transition:transform .25s}
 .card:hover{transform:translateY(-6px) rotate(-.4deg)}
-.card:nth-child(1){background:var(--lav);grid-row:span 2}
+.card:nth-child(1){background:var(--lav)}
 .card:nth-child(2){background:var(--mint)}
 .card:nth-child(3){background:var(--butter)}
 .card:nth-child(4){background:var(--peach)}
@@ -96,7 +96,7 @@ nav ul a:hover{color:var(--text)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
 .tags span{background:rgba(255,255,255,.65);border-radius:99px;padding:4px 12px;font-size:.85rem}
 .card a.more{font-weight:500;text-underline-offset:4px}
-@media(max-width:820px){.grid{grid-template-columns:1fr}.card:nth-child(1){grid-row:auto}}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
 
 /* project mockups */
 .frame{background:#fff;border:2px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 8px 0 rgba(42,35,64,.16)}
@@ -236,16 +236,31 @@ nav ul a:hover{color:var(--text)}
 <section class="wrap" id="projects">
   <h2>Projects</h2>
   <div class="grid">
-    <article class="card">
-      <span class="date">September 2026</span>
-      <h3>Wuzzuf Job Market Intelligence Pipeline</h3>
-      <ul>
-        <li>Automated multi-track scraping with Selenium to collect live job listings across data engineering, data science, and AI, handling dynamic pages and pagination.</li>
-        <li>Cleaned the data in Pandas: deduplication, column standardization, and features such as employment type and work mode.</li>
-        <li>Deployed a Streamlit dashboard with live filtering by track and work mode.</li>
-      </ul>
-      <div class="tags"><span>Python</span><span>Selenium</span><span>Pandas</span><span>Streamlit</span><span>Git</span></div>
-      <a class="more" href="https://github.com/zeinahussien/Job-Web-Scraping-Wuzzuf-" target="_blank" rel="noopener">View on GitHub</a>
+    <article class="card wide">
+      <div class="info">
+        <span class="date">September 2026</span>
+        <h3>Wuzzuf Job Market Intelligence Pipeline</h3>
+        <ul>
+          <li>Automated multi-track scraping with Selenium to collect live job listings across data engineering, data science, and AI, handling dynamic pages and pagination.</li>
+          <li>Cleaned the data in Pandas: deduplication, column standardization, and features such as employment type and work mode.</li>
+          <li>Deployed a Streamlit dashboard with live filtering by track and work mode.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>Selenium</span><span>Pandas</span><span>Streamlit</span><span>Git</span></div>
+        <a class="more" href="https://github.com/zeinahussien/Job-Web-Scraping-Wuzzuf-" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+      <div class="devices">
+        <div class="tabs" role="tablist" aria-label="Dashboard views">
+          <button role="tab" aria-selected="true" data-src="images/wuzzuf-overview.jpg" data-alt="Wuzzuf dashboard overview with active listings, hiring companies, and work mode charts">Overview</button>
+          <button role="tab" aria-selected="false" data-src="images/wuzzuf-filtered.jpg" data-alt="Wuzzuf dashboard filtered to Senior roles in the Data Science track">Filtered</button>
+          <button role="tab" aria-selected="false" data-src="images/wuzzuf-jobfeed.jpg" data-alt="Wuzzuf dashboard live job feed table with clickable listings">Job Feed</button>
+        </div>
+        <div class="laptop">
+          <div class="frame">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <img id="wuzzufShot" src="images/wuzzuf-overview.jpg" alt="Wuzzuf dashboard overview with active listings, hiring companies, and work mode charts" width="1100" height="547" loading="lazy">
+          </div>
+        </div>
+      </div>
     </article>
     <article class="card">
       <span class="date">September 2026</span>
@@ -364,13 +379,16 @@ nav ul a:hover{color:var(--text)}
 
 <script>
 (function(){
-  var shot=document.getElementById('foodShot');
-  if(!shot)return;
-  document.querySelectorAll('.tabs button').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected','false')});
-      b.setAttribute('aria-selected','true');
-      shot.src=b.dataset.src; shot.alt=b.dataset.alt;
+  document.querySelectorAll('.devices').forEach(function(device){
+    var shot=device.querySelector('.laptop img');
+    if(!shot)return;
+    var tabs=device.querySelectorAll('.tabs button');
+    tabs.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabs.forEach(function(x){x.setAttribute('aria-selected','false')});
+        b.setAttribute('aria-selected','true');
+        shot.src=b.dataset.src; shot.alt=b.dataset.alt;
+      });
     });
   });
 })();
